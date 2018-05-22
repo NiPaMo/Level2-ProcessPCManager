@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Pinger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Level 2 Process PC Management Tool" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="PC1" Margin="320,137,324,191" TextWrapping="Wrap"/>
-        <Button Content="Ping" Margin="359,266,358,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Image Source="/logo.png" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <Button Content="Configure" Margin="712,10,10,0" VerticalAlignment="Top" Click="Configure_Click" Height="22"/>
+
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="10,33,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Border>
+        <Label x:Name="PC1_HostName" Content="MAL2HSM17" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PC1_NickName" Content="Nick Moyer" HorizontalAlignment="Left" Margin="106,33,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label x:Name="PC1_Label" Margin="11,59,691,301" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data" Margin="101,59,607,301" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+
+        <Button Content="Ping" Margin="286,341,360,0" VerticalAlignment="Top" Click="Ping_Click" Height="22"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="10,50,0,0" VerticalAlignment="Top" Width="175"/>
+
     </Grid>
 </Window>

@@ -22,14 +22,13 @@ namespace Tiny_Pinger
             PCList[0] = "MAL2HSM17";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Ping_Click(object sender, RoutedEventArgs e)
         {
             Ping pingSender = new Ping();
-            PingOptions options = new PingOptions();
-
-            // Use the default Ttl value which is 128,
-            // but change the fragmentation behavior.
-            options.DontFragment = true;
+            PingOptions options = new PingOptions
+            {
+                DontFragment = true
+            };
 
             // Create a buffer of 32 bytes of data to be transmitted.
             string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
@@ -39,14 +38,22 @@ namespace Tiny_Pinger
             PingReply reply = pingSender.Send(PCList[0], timeout, buffer, options);
             if (reply.Status == IPStatus.Success)
             {
-                PC1.Background = (Brush)converter.ConvertFromString("#145A32");
-                PC1.Text = reply.Address.ToString() + "\n" +
-                    reply.RoundtripTime + "\n";
+                PC1_Data.Background = (Brush)converter.ConvertFromString("#145A32");
+                PC1_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
             }
             else
             {
-                PC1.Background = (Brush)converter.ConvertFromString("#641E16");
+                PC1_Data.Background = (Brush)converter.ConvertFromString("#641E16");
+                PC1_Data.Content = reply.Status.ToString();
             }
+        }
+
+        private void Configure_Click(object sender, RoutedEventArgs e)
+        {
+            ConfigurationWindow configuration = new ConfigurationWindow();
+            configuration.Show();
         }
     }
 }
