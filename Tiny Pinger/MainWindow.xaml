@@ -12,16 +12,105 @@
         <Button Content="Configure" Margin="712,10,10,0" VerticalAlignment="Top" Click="Configure_Click" Height="22"/>
 
 
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="10,33,0,0" VerticalAlignment="Top" Width="175" >
-            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="10,50,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
         </Border>
-        <Label x:Name="PC1_HostName" Content="MAL2HSM17" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PC1_NickName" Content="Nick Moyer" HorizontalAlignment="Left" Margin="106,33,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label x:Name="PC1_Label" Margin="11,59,691,301" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
-        <Label x:Name="PC1_Data" Margin="101,59,607,301" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Label x:Name="PC1_HostName" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName" HorizontalAlignment="Left" Margin="106,50,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label" Margin="11,76,691,284" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data" Margin="101,76,607,284" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="10,67,0,0" VerticalAlignment="Top" Width="175"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="207,50,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC2_HostName" HorizontalAlignment="Left" Margin="207,50,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC2_NickName" HorizontalAlignment="Left" Margin="303,50,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC2_Label" Margin="208,76,494,284" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC2_Data" Margin="298,76,410,284" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="207,67,0,0" VerticalAlignment="Top" Width="175"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="410,50,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC3_HostName" HorizontalAlignment="Left" Margin="410,50,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC3_NickName" HorizontalAlignment="Left" Margin="506,50,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC3_Label" Margin="411,76,291,284" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC3_Data" Margin="501,76,207,284" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="410,67,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="607,50,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy2" HorizontalAlignment="Left" Margin="607,50,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy2" HorizontalAlignment="Left" Margin="703,50,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy2" Margin="608,76,94,284" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy2" Margin="698,76,10,284" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="607,67,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="10,148,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy3" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy3" HorizontalAlignment="Left" Margin="106,148,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy3" Margin="11,174,691,186" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy3" Margin="101,174,607,186" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="10,165,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="207,148,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy4" HorizontalAlignment="Left" Margin="207,148,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy4" HorizontalAlignment="Left" Margin="303,148,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy4" Margin="208,174,494,186" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy4" Margin="298,174,410,186" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="207,165,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="410,148,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy5" HorizontalAlignment="Left" Margin="410,148,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy5" HorizontalAlignment="Left" Margin="506,148,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy5" Margin="411,174,291,186" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy5" Margin="501,174,207,186" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="410,165,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="607,148,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy6" HorizontalAlignment="Left" Margin="607,148,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy6" HorizontalAlignment="Left" Margin="703,148,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy6" Margin="608,174,94,186" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy6" Margin="698,174,10,186" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="607,165,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="10,243,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy7" HorizontalAlignment="Left" Margin="10,243,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy7" HorizontalAlignment="Left" Margin="106,243,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy7" Margin="11,269,691,91" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy7" Margin="101,269,607,91" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="10,260,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="207,243,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy8" HorizontalAlignment="Left" Margin="207,243,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy8" HorizontalAlignment="Left" Margin="303,243,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy8" Margin="208,269,494,91" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy8" Margin="298,269,410,91" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="207,260,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="410,243,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy9" HorizontalAlignment="Left" Margin="410,243,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy9" HorizontalAlignment="Left" Margin="506,243,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy9" Margin="411,269,291,91" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy9" Margin="501,269,207,91" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="410,260,0,0" VerticalAlignment="Top" Width="175"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="607,243,0,0" VerticalAlignment="Top" Width="175" >
+            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Margin="79,0"/>
+        </Border>
+        <Label x:Name="PC1_HostName_Copy10" HorizontalAlignment="Left" Margin="607,243,0,0" VerticalAlignment="Top" Height="21" Width="79"/>
+        <Label x:Name="PC1_NickName_Copy10" HorizontalAlignment="Left" Margin="703,243,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
+        <Label x:Name="PC1_Label_Copy10" Margin="608,269,94,91" Content="Status&#xA;IP Address&#xA;Reply Time" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1" />
+        <Label x:Name="PC1_Data_Copy10" Margin="698,269,10,91" Content="" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="607,260,0,0" VerticalAlignment="Top" Width="175"/>
 
         <Button Content="Ping" Margin="286,341,360,0" VerticalAlignment="Top" Click="Ping_Click" Height="22"/>
-        <Separator HorizontalAlignment="Left" Height="9" Margin="10,50,0,0" VerticalAlignment="Top" Width="175"/>
-
     </Grid>
 </Window>

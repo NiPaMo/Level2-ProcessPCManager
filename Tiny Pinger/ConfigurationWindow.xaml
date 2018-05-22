@@ -8,8 +8,8 @@
         Title="ConfigurationWindow" Height="450" Width="300">
     <Grid>
         <Grid Margin="0,10,0,376">
-            <Label Content="Host Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,8,0,0" FontWeight="Bold"/>
-            <Label Content="Nick Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,8,0,0" FontWeight="Bold"/>
+            <Label Content="Host Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,0,0,0" FontWeight="Bold" Height="34"/>
+            <Label Content="Nick Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,0,0,0" FontWeight="Bold" Height="34"/>
         </Grid>
         <Grid Margin="0,49,0,52">
             <Label Content="1" HorizontalAlignment="Left" Margin="10,-3,0,0" VerticalAlignment="Top"/>
