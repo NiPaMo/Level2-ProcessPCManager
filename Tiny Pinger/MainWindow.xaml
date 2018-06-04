@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Pinger"
         mc:Ignorable="d"
-        Title="Level 2 Process PC Management Tool" Height="450" Width="810" Background="LightGray">
+        Title="Level 2 Process PC Management Tool" Height="625" Width="810" Background="LightGray">
     <Grid>
         <!--Header-->
         <Image Source="/logo.png" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -120,6 +120,80 @@
             <Label x:Name="PC12_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
             <Label x:Name="PC12_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
             <Rectangle x:Name="PC12_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <!--Row 4-->
+        <Grid Margin="10,350,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC13_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC13_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC13_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC13_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC13_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="210,350,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC14_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC14_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC14_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC14_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC14_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="410,350,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC15_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC15_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC15_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC15_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC15_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="610,350,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC16_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC16_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC16_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC16_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC16_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <!--Row 5-->
+        <Grid Margin="10,450,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC17_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC17_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC17_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC17_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC17_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="210,450,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC18_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC18_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC18_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC18_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC18_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="410,450,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC19_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC19_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC19_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC19_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC19_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
+        </Grid>
+
+        <Grid Margin="610,450,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0"/>
+            <Label x:Name="PC20_HostName" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="80" Padding="3" FontWeight="Bold"/>
+            <Label x:Name="PC20_NickName" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="95" Padding="3" FontStyle="Italic"/>
+            <Label x:Name="PC20_Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="60" Width="90" Content="Status&#xA;IP Address&#xA;Reply Time" Padding="1" BorderThickness="1,1,0,0" BorderBrush="Black"/>
+            <Label x:Name="PC20_Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="90" Padding="1" BorderThickness="0,1,1,0" BorderBrush="Black"/>
+            <Rectangle x:Name="PC20_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
         </Grid>
 
         <Button Content="Ping" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="35" Click="Ping_Click"/>

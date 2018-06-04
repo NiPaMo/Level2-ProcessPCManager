@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net.NetworkInformation;
 using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Media;
 
@@ -20,8 +22,27 @@ namespace Tiny_Pinger
         {
             InitializeComponent();
 
+            Timer timer = new Timer(60000);
+            timer.Elapsed += OnTimedEvent;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+
             config = new Config();
             LoadConfig();
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                int i = 0;
+
+                while (config.GetHostName(i).ToString().Length > 1)
+                {
+                    Ping(config.GetHostName(i).ToString());
+                    i++;
+                }
+            });
         }
 
         private void LoadConfig()
@@ -48,9 +69,27 @@ namespace Tiny_Pinger
             PC10_NickName.Content = config.GetNickName(9);
             PC11_HostName.Content = config.GetHostName(10);
             PC11_NickName.Content = config.GetNickName(10);
+            PC12_HostName.Content = config.GetHostName(11);
+            PC12_NickName.Content = config.GetNickName(11);
+            PC13_HostName.Content = config.GetHostName(12);
+            PC13_NickName.Content = config.GetNickName(12);
+            PC14_HostName.Content = config.GetHostName(13);
+            PC14_NickName.Content = config.GetNickName(13);
+            PC15_HostName.Content = config.GetHostName(14);
+            PC15_NickName.Content = config.GetNickName(14);
+            PC16_HostName.Content = config.GetHostName(15);
+            PC16_NickName.Content = config.GetNickName(15);
+            PC17_HostName.Content = config.GetHostName(16);
+            PC17_NickName.Content = config.GetNickName(16);
+            PC18_HostName.Content = config.GetHostName(17);
+            PC18_NickName.Content = config.GetNickName(17);
+            PC19_HostName.Content = config.GetHostName(18);
+            PC19_NickName.Content = config.GetNickName(18);
+            PC20_HostName.Content = config.GetHostName(19);
+            PC20_NickName.Content = config.GetNickName(19);
         }
 
-        private void GetReply(string hostName)
+        private void Ping(string hostName)
         {
             Ping pingSender = new Ping();
             PingOptions options = new PingOptions
@@ -63,20 +102,15 @@ namespace Tiny_Pinger
             byte[] buffer = Encoding.ASCII.GetBytes(data);
             int timeout = 120;
 
-            reply = pingSender.Send(hostName, timeout, buffer, options);
-        }
-
-        private void Ping(string hostName)
-        {
-            GetReply(hostName);
-
-            if (reply.Status == IPStatus.Success)
+            try
             {
+                reply = pingSender.Send(hostName, timeout, buffer, options);
                 ReplySucess(hostName);
             }
-            else
+            catch (Exception e)
             {
                 ReplyFailure(hostName);
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -159,6 +193,69 @@ namespace Tiny_Pinger
                     + reply.Address.ToString() + "\n"
                     + reply.RoundtripTime.ToString() + " ms";
             }
+            else if (hostName.Equals(PC12_HostName.Content.ToString()))
+            {
+                PC12_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC12_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC13_HostName.Content.ToString()))
+            {
+                PC13_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC13_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC14_HostName.Content.ToString()))
+            {
+                PC14_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC14_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC15_HostName.Content.ToString()))
+            {
+                PC15_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC15_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC16_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC16_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC17_HostName.Content.ToString()))
+            {
+                PC17_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC17_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC18_HostName.Content.ToString()))
+            {
+                PC18_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC18_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC19_HostName.Content.ToString()))
+            {
+                PC19_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC19_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
+            else if (hostName.Equals(PC20_HostName.Content.ToString()))
+            {
+                PC20_Status.Fill = (Brush)converter.ConvertFromString("#145A32");
+                PC20_Data.Content = reply.Status.ToString() + "\n"
+                    + reply.Address.ToString() + "\n"
+                    + reply.RoundtripTime.ToString() + " ms";
+            }
         }
 
         private void ReplyFailure(string hostName)
@@ -166,65 +263,113 @@ namespace Tiny_Pinger
             if (hostName.Equals(PC1_HostName.Content.ToString()))
             {
                 PC1_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC1_Data.Content = reply.Status.ToString();
+                PC1_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC2_HostName.Content.ToString()))
             {
                 PC2_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC2_Data.Content = reply.Status.ToString();
+                PC2_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC3_HostName.Content.ToString()))
             {
                 PC3_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC3_Data.Content = reply.Status.ToString();
+                PC3_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC4_HostName.Content.ToString()))
             {
                 PC4_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC4_Data.Content = reply.Status.ToString();
+                PC4_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC5_HostName.Content.ToString()))
             {
                 PC5_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC5_Data.Content = reply.Status.ToString();
+                PC5_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC6_HostName.Content.ToString()))
             {
                 PC6_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC6_Data.Content = reply.Status.ToString();
+                PC6_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC7_HostName.Content.ToString()))
             {
                 PC7_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC7_Data.Content = reply.Status.ToString();
+                PC7_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC8_HostName.Content.ToString()))
             {
                 PC8_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC8_Data.Content = reply.Status.ToString();
+                PC8_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC9_HostName.Content.ToString()))
             {
                 PC9_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC9_Data.Content = reply.Status.ToString();
+                PC9_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC10_HostName.Content.ToString()))
             {
                 PC10_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC10_Data.Content = reply.Status.ToString();
+                PC10_Data.Content = "Failure";
             }
             else if (hostName.Equals(PC11_HostName.Content.ToString()))
             {
                 PC11_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
-                PC11_Data.Content = reply.Status.ToString();
+                PC11_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC12_HostName.Content.ToString()))
+            {
+                PC12_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC12_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC13_HostName.Content.ToString()))
+            {
+                PC13_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC13_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC14_HostName.Content.ToString()))
+            {
+                PC14_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC14_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC15_HostName.Content.ToString()))
+            {
+                PC15_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC15_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC16_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC16_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC17_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC17_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC18_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC18_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC19_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC19_Data.Content = "Failure";
+            }
+            else if (hostName.Equals(PC16_HostName.Content.ToString()))
+            {
+                PC20_Status.Fill = (Brush)converter.ConvertFromString("#641E16");
+                PC20_Data.Content = "Failure";
             }
         }
 
         private void Ping_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < 11; i++)
+            int i = 0;
+
+            while (config.GetHostName(i).ToString().Length > 1)
             {
                 Ping(config.GetHostName(i).ToString());
+                i++;
             }
         }
 

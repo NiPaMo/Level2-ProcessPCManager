@@ -12,7 +12,6 @@ namespace Tiny_Pinger
         private static string fileName = "\\\\Mamafil01\\Automatn_Pub\\Level 2 PC List\\Config.txt";
         private static string[] namesH = new string[20];
         private static string[] namesN = new string[20];
-        private static int pos;
 
         public Config()
         {
@@ -21,20 +20,19 @@ namespace Tiny_Pinger
 
         public void GetConfig()
         {
-            pos = 0;
-
             try
             {
                 // Read the current configuration
                 using (StreamReader sr = new StreamReader(fileName))
                 {
+                    int i = 0;
                     string line;
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        namesH[pos] = line.Substring(0, line.IndexOf(' '));
-                        namesN[pos] = line.Substring(line.IndexOf(' ') + 1);
-                        pos++;
+                        namesH[i] = line.Substring(0, line.IndexOf(' '));
+                        namesN[i] = line.Substring(line.IndexOf(' ') + 1);
+                        i++;
                     }
                 }
             }
@@ -54,7 +52,7 @@ namespace Tiny_Pinger
                     int i = 0;
                     string line;
 
-                    while (i < pos)
+                    while ((namesH[i] != null) && (namesN[i] != null))
                     {
                         line = namesH[i] + ' ' + namesN[i];
                         sw.WriteLine(line);

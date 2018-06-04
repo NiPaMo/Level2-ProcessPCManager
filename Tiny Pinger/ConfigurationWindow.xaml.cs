@@ -43,6 +43,24 @@ namespace Tiny_Pinger
             PC10_NickName.Text = config.GetNickName(9);
             PC11_HostName.Text = config.GetHostName(10);
             PC11_NickName.Text = config.GetNickName(10);
+            PC12_HostName.Text = config.GetHostName(11);
+            PC12_NickName.Text = config.GetNickName(11);
+            PC13_HostName.Text = config.GetHostName(12);
+            PC13_NickName.Text = config.GetNickName(12);
+            PC14_HostName.Text = config.GetHostName(13);
+            PC14_NickName.Text = config.GetNickName(13);
+            PC15_HostName.Text = config.GetHostName(14);
+            PC15_NickName.Text = config.GetNickName(14);
+            PC16_HostName.Text = config.GetHostName(15);
+            PC16_NickName.Text = config.GetNickName(15);
+            PC17_HostName.Text = config.GetHostName(16);
+            PC17_NickName.Text = config.GetNickName(16);
+            PC18_HostName.Text = config.GetHostName(17);
+            PC18_NickName.Text = config.GetNickName(17);
+            PC19_HostName.Text = config.GetHostName(18);
+            PC19_NickName.Text = config.GetNickName(18);
+            PC20_HostName.Text = config.GetHostName(19);
+            PC20_NickName.Text = config.GetNickName(19);
         }
 
         private void ApplyConfig()
@@ -69,6 +87,24 @@ namespace Tiny_Pinger
             config.SetNickName(PC10_NickName.Text, 9);
             config.SetHostName(PC11_HostName.Text, 10);
             config.SetNickName(PC11_NickName.Text, 10);
+            config.SetNickName(PC12_NickName.Text, 11);
+            config.SetHostName(PC12_HostName.Text, 11);
+            config.SetNickName(PC13_NickName.Text, 12);
+            config.SetHostName(PC13_HostName.Text, 12);
+            config.SetNickName(PC14_NickName.Text, 13);
+            config.SetHostName(PC14_HostName.Text, 13);
+            config.SetNickName(PC15_NickName.Text, 14);
+            config.SetHostName(PC15_HostName.Text, 14);
+            config.SetNickName(PC16_NickName.Text, 15);
+            config.SetHostName(PC16_HostName.Text, 15);
+            config.SetNickName(PC17_NickName.Text, 16);
+            config.SetHostName(PC17_HostName.Text, 16);
+            config.SetNickName(PC18_NickName.Text, 17);
+            config.SetHostName(PC18_HostName.Text, 17);
+            config.SetNickName(PC19_NickName.Text, 18);
+            config.SetHostName(PC19_HostName.Text, 18);
+            config.SetNickName(PC20_NickName.Text, 19);
+            config.SetHostName(PC20_HostName.Text, 19);
         }
 
 

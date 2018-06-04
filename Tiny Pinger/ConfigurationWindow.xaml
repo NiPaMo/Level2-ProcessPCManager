@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Pinger"
         mc:Ignorable="d"
-        Title="ConfigurationWindow" Height="600" Width="265" Background="LightGray">
+        Title="ConfigurationWindow" Height="615" Width="265" Background="LightGray">
     <Grid>
         <!--Header-->
         <Grid VerticalAlignment="Top" Height="25">
