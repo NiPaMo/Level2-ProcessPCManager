@@ -1,32 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
 using System.Windows.Media;
 
 namespace Tiny_Pinger
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         BrushConverter converter = new BrushConverter();
 
         Config config;
         PingReply reply;
+        Timer timer = new Timer();
 
         int timeout = 100;
-        int interval = 60000;
+        int interval = 60;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            Timer timer = new Timer(interval);
+            timer.Interval = interval*1000;
             timer.Elapsed += OnTimedEvent;
             timer.AutoReset = true;
             timer.Enabled = true;
@@ -35,10 +30,19 @@ namespace Tiny_Pinger
             LoadConfig();
         }
 
-       
-
         private void LoadConfig()
         {
+            int i = 0;
+
+            while (i < 20)
+            {
+                PingAsync(config.GetHostName(i).ToString());
+                i++;
+            }
+
+            Interval.Text = interval.ToString();
+            Timeout.Text = timeout.ToString();
+
             PC1_HostName.Content = config.GetHostName(0);
             PC1_NickName.Content = config.GetNickName(0);
             PC2_HostName.Content = config.GetHostName(1);
@@ -352,7 +356,7 @@ namespace Tiny_Pinger
             {
                 int i = 0;
 
-                while (config.GetHostName(i).ToString().Length > 1)
+                while (i < 20)
                 {
                     PingAsync(config.GetHostName(i).ToString());
                     i++;
@@ -361,21 +365,40 @@ namespace Tiny_Pinger
 
         }
 
-        private void Ping_Click(object sender, RoutedEventArgs e)
-        {
-            int i = 0;
-
-            while (config.GetHostName(i).ToString().Length > 1)
-            {
-                PingAsync(config.GetHostName(i).ToString());
-                i++;
-            }
-        }
-
         private void Configure_Click(object sender, RoutedEventArgs e)
         {
             ConfigurationWindow configuration = new ConfigurationWindow();
             configuration.Show();
+        }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                interval = Int32.Parse(Interval.Text);
+                timer.Stop();
+                timer.Interval = interval*1000;
+                timer.Start();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid format for interval");
+            }
+
+            try
+            {
+                timeout = Int32.Parse(Timeout.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid format for timeout");
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ManageWindow manage = new ManageWindow();
+            manage.Show();
         }
     }
 }

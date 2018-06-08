@@ -112,6 +112,7 @@ namespace Tiny_Pinger
         {
             ApplyConfig();
             config.SetConfig();
+            this.Close();
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)

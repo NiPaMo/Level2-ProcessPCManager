@@ -10,8 +10,8 @@ namespace Tiny_Pinger
     public class Config
     {
         private static string fileName = "\\\\Mamafil01\\Automatn_Pub\\Level 2 PC List\\Config.txt";
-        private static string[] namesH = new string[20];
-        private static string[] namesN = new string[20];
+        private static string[] namesH = new string[25];
+        private static string[] namesN = new string[25];
 
         public Config()
         {
