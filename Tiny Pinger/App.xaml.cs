@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Tiny_Pinger
+namespace Process_PC_Manager
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Tiny_Pinger
+namespace Process_PC_Manager
 {
     /// <summary>
     /// Interaction logic for ConfigurationWindow.xaml

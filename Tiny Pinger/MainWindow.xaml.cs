@@ -4,7 +4,7 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Media;
 
-namespace Tiny_Pinger
+namespace Process_PC_Manager
 {
     public partial class MainWindow : Window
     {

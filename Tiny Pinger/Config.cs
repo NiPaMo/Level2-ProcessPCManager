@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Tiny_Pinger
+namespace Process_PC_Manager
 {
     public class Config
     {

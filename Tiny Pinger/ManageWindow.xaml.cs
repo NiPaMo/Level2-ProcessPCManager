@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Management;
 
-namespace Tiny_Pinger
+namespace Process_PC_Manager
 {
     public partial class ManageWindow : Window
     {
