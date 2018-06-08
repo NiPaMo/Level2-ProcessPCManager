@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Pinger"
         mc:Ignorable="d"
-        Title="ConfigurationWindow" Height="615" Width="265" Background="LightGray">
+        Title="Host Name Configuration" Height="650" Width="265" Background="LightGray">
     <Grid>
         <!--Header-->
         <Grid VerticalAlignment="Top" Height="25">
@@ -13,7 +13,7 @@
         </Grid>
         
         <!--PC List-->
-        <Grid Margin="0,30,0,37">
+        <Grid Margin="0,30,0,75">
             <!--Row 1-->
             <Grid VerticalAlignment="Top" Height="25">
                 <Label Content="1" HorizontalAlignment="Left" Margin="10,0,0,0"/>
@@ -154,6 +154,9 @@
                 <TextBox x:Name="PC20_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
             </Grid>
         </Grid>
+
+        <Label Content="Configuration List" HorizontalAlignment="Left" Margin="10,0,0,50" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="List" HorizontalAlignment="Left" Height="23" Margin="127,0,0,50" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120"/>
 
         <Button Content="Apply" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30,10" Width="75" Click="Apply_Click"/>
         <Button Content="Reset" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="30,10" Width="75" Click="Reset_Click"/>

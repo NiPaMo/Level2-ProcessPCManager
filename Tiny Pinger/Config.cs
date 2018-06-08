@@ -9,21 +9,30 @@ namespace Tiny_Pinger
 {
     public class Config
     {
-        private static string fileName = "\\\\Mamafil01\\Automatn_Pub\\Level 2 PC List\\Config.txt";
+        private static string configPath = "\\\\Mamafil01\\Automatn_Pub\\Level 2 Utilities\\Process PC Manager\\Configurations\\List.txt";
+        private static string filePath = "\\\\Mamafil01\\Automatn_Pub\\Level 2 Utilities\\Process PC Manager\\Configurations\\";
+        private static string fileName;
+        private static string[] configs = new string[10];
         private static string[] namesH = new string[25];
         private static string[] namesN = new string[25];
-
+        
         public Config()
         {
+            GetConfigList();
             GetConfig();
         }
 
         public void GetConfig()
         {
+            if (fileName == null)
+                fileName = configs[0];
+
+            string file = filePath + fileName + ".txt";
+
             try
             {
                 // Read the current configuration
-                using (StreamReader sr = new StreamReader(fileName))
+                using (StreamReader sr = new StreamReader(file))
                 {
                     int i = 0;
                     string line;
@@ -44,10 +53,12 @@ namespace Tiny_Pinger
 
         public void SetConfig()
         {
+            string file = filePath + fileName + ".txt";
+
             try
             {
                 // Write the current configuration
-                using (StreamWriter sw = new StreamWriter(fileName))
+                using (StreamWriter sw = new StreamWriter(file))
                 {
                     int i = 0;
                     string line;
@@ -66,9 +77,47 @@ namespace Tiny_Pinger
             }
         }
 
+        public void GetConfigList()
+        {
+            try
+            {
+                // Read the current configuration list
+                using (StreamReader sr = new StreamReader(configPath))
+                {
+                    int i = 0;
+                    string line;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        configs[i] = line;
+                        i++;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public int GetHostName_Length()
+        {
+            return namesH.Count(s => s != null);
+        }
+
+        public int GetConfigs_Length()
+        {
+            return configs.Count(s => s != null);
+        }
+
         public string GetHostName(int i)
         {
             return namesH[i];
+        }
+
+        public string GetConfigs(int i)
+        {
+            return configs[i];
         }
 
 
@@ -86,6 +135,16 @@ namespace Tiny_Pinger
         public void SetNickName(String str, int i)
         {
             namesN[i] = str;
+        }
+
+        public void SetFileName(String str)
+        {
+            fileName = str;
+        }
+
+        public string GetFileName()
+        {
+            return fileName;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Tiny_Pinger
 {
@@ -9,18 +7,19 @@ namespace Tiny_Pinger
     /// </summary>
     public partial class ConfigurationWindow : Window
     {
-        Config config;
+        Config config = new Config();
 
         public ConfigurationWindow()
         {
             InitializeComponent();
 
-            config = new Config();
             LoadConfig();
         }
 
         private void LoadConfig()
         {
+            List.Text = config.GetFileName();
+
             PC1_HostName.Text = config.GetHostName(0);
             PC1_NickName.Text = config.GetNickName(0);
             PC2_HostName.Text = config.GetHostName(1);
@@ -65,6 +64,8 @@ namespace Tiny_Pinger
 
         private void ApplyConfig()
         {
+            config.SetFileName(List.Text);
+
             config.SetHostName(PC1_HostName.Text, 0);
             config.SetNickName(PC1_NickName.Text, 0);
             config.SetHostName(PC2_HostName.Text, 1);
@@ -106,7 +107,6 @@ namespace Tiny_Pinger
             config.SetNickName(PC20_NickName.Text, 19);
             config.SetHostName(PC20_HostName.Text, 19);
         }
-
 
         private void Apply_Click(object sender, RoutedEventArgs e)
         {

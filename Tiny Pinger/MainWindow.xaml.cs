@@ -10,8 +10,8 @@ namespace Tiny_Pinger
     {
         BrushConverter converter = new BrushConverter();
 
-        Config config;
         PingReply reply;
+        Config config = new Config();
         Timer timer = new Timer();
 
         int timeout = 100;
@@ -26,7 +26,6 @@ namespace Tiny_Pinger
             timer.AutoReset = true;
             timer.Enabled = true;
 
-            config = new Config();
             LoadConfig();
         }
 
@@ -34,7 +33,19 @@ namespace Tiny_Pinger
         {
             int i = 0;
 
-            while (i < 20)
+            Selection.Items.Clear();
+
+            while (i < config.GetConfigs_Length())
+            {
+                Selection.Items.Add(config.GetConfigs(i));
+                i++;
+            }
+
+            Selection.SelectedValue = config.GetFileName();
+
+            i = 0;
+
+            while (i < config.GetHostName_Length())
             {
                 PingAsync(config.GetHostName(i).ToString());
                 i++;
@@ -399,6 +410,12 @@ namespace Tiny_Pinger
         {
             ManageWindow manage = new ManageWindow();
             manage.Show();
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            config.SetFileName(Selection.SelectedItem.ToString());
+            LoadConfig();
         }
     }
 }

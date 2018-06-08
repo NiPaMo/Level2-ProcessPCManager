@@ -196,15 +196,18 @@
             <Rectangle x:Name="PC20_Status" HorizontalAlignment="Left" Height="10" Width="10" Margin="70,31,0,45"/>
         </Grid>
 
-        <Label Content="Interval" HorizontalAlignment="Left" Margin="220,0,0,10" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="Interval" HorizontalAlignment="Left" Height="23" Margin="270,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="35"/>
-        <Label Content="s" HorizontalAlignment="Left" Margin="302,0,0,10" VerticalAlignment="Bottom"/>
-        <Label Content="Timeout" HorizontalAlignment="Left" Margin="350,0,0,10" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="Timeout" HorizontalAlignment="Left" Height="23" Margin="410,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="35"/>
-        <Label Content="ms" HorizontalAlignment="Left" Margin="442,0,0,10" VerticalAlignment="Bottom"/>
-        <Button Content="Apply" HorizontalAlignment="Left" Margin="500,0,0,10" VerticalAlignment="Bottom" Width="75" Click="Apply_Click"/>
-        
+        <Label Content="Interval" HorizontalAlignment="Left" Margin="430,0,0,10" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="Interval" HorizontalAlignment="Left" Height="23" Margin="480,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="35"/>
+        <Label Content="s" HorizontalAlignment="Left" Margin="512,0,0,10" VerticalAlignment="Bottom"/>
+        <Label Content="Timeout" HorizontalAlignment="Left" Margin="560,0,0,10" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="Timeout" HorizontalAlignment="Left" Height="23" Margin="620,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="35"/>
+        <Label Content="ms" HorizontalAlignment="Left" Margin="652,0,0,10" VerticalAlignment="Bottom"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="710,0,0,10" VerticalAlignment="Bottom" Width="75" Click="Apply_Click"/>
+
         <Button Content="Manage" HorizontalAlignment="Right" Margin="0,10,125,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
+        <Label Content="Configuration List" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="Selection"  HorizontalAlignment="Left" Margin="129,0,0,10" VerticalAlignment="Bottom" Width="120"/>
+        <Button Content="Open" HorizontalAlignment="Left" Margin="267,0,0,10" VerticalAlignment="Bottom" Width="75" Click="Open_Click"/>
     </Grid>
 </Window>
