@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Process_PC_Manager"
         mc:Ignorable="d"
-        Title="Computer Management" Height="400" Width="350" Background="LightGray">
+        Title="Computer Management" Height="350" Width="375" Background="LightGray">
     <Grid>
-        <TextBox x:Name ="HostName" HorizontalAlignment="Left" Height="23" Margin="87,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Connect" HorizontalAlignment="Left" Margin="257,10,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
-        <TextBlock x:Name="Details" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="234" Width="322"/>
+        <TextBlock x:Name="Details" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="200" Width="347" FontSize="14"/>
         <Label Content="Host Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Details" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Details" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <ComboBox x:Name="HostName" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="125"/>
 
     </Grid>
 </Window>
