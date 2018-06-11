@@ -7,11 +7,14 @@ namespace Process_PC_Manager
     public partial class ManageWindow : Window
     {
         Config config = new Config();
+        PasswordPromptWindow prompt = new PasswordPromptWindow();
 
         string hostName;
 
         public ManageWindow()
         {
+            prompt.ShowDialog();
+
             InitializeComponent();
 
             int i = 0;
@@ -31,9 +34,11 @@ namespace Process_PC_Manager
 
             ConnectionOptions options = new ConnectionOptions
             {
-                Impersonation = System.Management.ImpersonationLevel.Impersonate,
-                Username = "automation",
-                Password = "automation"
+                Impersonation = ImpersonationLevel.Impersonate,
+                Authentication = AuthenticationLevel.Packet,
+                EnablePrivileges = true,
+                Username = hostName + "\\" +prompt.GetUsername(),
+                Password = prompt.GetPassword()
             };
 
             try
@@ -58,6 +63,11 @@ namespace Process_PC_Manager
                                    "Architecture \t:  " + m["OSArchitecture"] + "\n" +
                                    "Serial Number\t:  " + m["SerialNumber"];
                 }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                // Display error to user
+                MessageBox.Show("Error connecting to " + hostName + "\nCheck username and password", "Access Denied", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
