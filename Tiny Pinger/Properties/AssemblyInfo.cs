@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tiny Pinger")]
+[assembly: AssemblyTitle("Process PC Manager")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AK Steel")]
-[assembly: AssemblyProduct("Tiny Pinger")]
+[assembly: AssemblyProduct("Process PC Manager")]
 [assembly: AssemblyCopyright("Copyright © AK Steel 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

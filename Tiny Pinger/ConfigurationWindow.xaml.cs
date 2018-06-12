@@ -18,7 +18,7 @@ namespace Process_PC_Manager
 
         private void LoadConfig()
         {
-            List.Text = config.GetFileName();
+            List.Content = config.GetFileName();
 
             PC1_HostName.Text = config.GetHostName(0);
             PC1_NickName.Text = config.GetNickName(0);
@@ -64,7 +64,7 @@ namespace Process_PC_Manager
 
         private void ApplyConfig()
         {
-            config.SetFileName(List.Text);
+            config.SetFileName(List.Content.ToString());
 
             config.SetHostName(PC1_HostName.Text, 0);
             config.SetNickName(PC1_NickName.Text, 0);
@@ -108,6 +108,52 @@ namespace Process_PC_Manager
             config.SetHostName(PC20_HostName.Text, 19);
         }
 
+        private void ClearConfig()
+        {
+            List.Content = config.GetFileName();
+
+            PC1_HostName.Text = ""; 
+            PC1_NickName.Text = "";
+            PC2_HostName.Text = "";
+            PC2_NickName.Text = "";
+            PC3_HostName.Text = "";
+            PC3_NickName.Text = "";
+            PC4_HostName.Text = "";
+            PC4_NickName.Text = "";
+            PC5_HostName.Text = "";
+            PC5_NickName.Text = "";
+            PC6_HostName.Text = "";
+            PC6_NickName.Text = "";
+            PC7_HostName.Text = "";
+            PC7_NickName.Text = "";
+            PC8_HostName.Text = "";
+            PC8_NickName.Text = "";
+            PC9_HostName.Text = "";
+            PC9_NickName.Text = "";
+            PC10_HostName.Text = "";
+            PC10_NickName.Text = "";
+            PC11_HostName.Text = "";
+            PC11_NickName.Text = "";
+            PC12_HostName.Text = "";
+            PC12_NickName.Text = "";
+            PC13_HostName.Text = "";
+            PC13_NickName.Text = "";
+            PC14_HostName.Text = "";
+            PC14_NickName.Text = "";
+            PC15_HostName.Text = "";
+            PC15_NickName.Text = "";
+            PC16_HostName.Text = "";
+            PC16_NickName.Text = "";
+            PC17_HostName.Text = "";
+            PC17_NickName.Text = "";
+            PC18_HostName.Text = "";
+            PC18_NickName.Text = "";
+            PC19_HostName.Text = "";
+            PC19_NickName.Text = "";
+            PC20_HostName.Text = "";
+            PC20_NickName.Text = "";
+        }
+
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
             ApplyConfig();
@@ -119,6 +165,26 @@ namespace Process_PC_Manager
         {
             config.GetConfig();
             LoadConfig();
+        }
+
+        private void CreateNew_Click(object sender, RoutedEventArgs e)
+        {
+            ListNamePromptWindow listNamePrompt = new ListNamePromptWindow();
+            listNamePrompt.ShowDialog();
+
+            string listName = listNamePrompt.GetListName();
+
+            if (listName != null)
+            {
+                config.SetFileName(listName);
+
+                if (!(bool)listNamePrompt.GetCopy())
+                    ClearConfig();
+                else
+                    List.Content = config.GetFileName();
+
+                config.SetConfigList();
+            }
         }
     }
 }

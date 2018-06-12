@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Process_PC_Manager
 {
@@ -12,9 +10,9 @@ namespace Process_PC_Manager
         private static string configPath = "\\\\Mamafil01\\Automatn_Pub\\Level 2 Utilities\\Process PC Manager\\Configurations\\List.txt";
         private static string filePath = "\\\\Mamafil01\\Automatn_Pub\\Level 2 Utilities\\Process PC Manager\\Configurations\\";
         private static string fileName;
-        private static string[] configs = new string[10];
-        private static string[] namesH = new string[25];
-        private static string[] namesN = new string[25];
+        private static List<String> configs = new List<string>();
+        private static List<String> namesH = new List<string>();
+        private static List<String> namesN = new List<string>();
         
         public Config()
         {
@@ -34,14 +32,15 @@ namespace Process_PC_Manager
                 // Read the current configuration
                 using (StreamReader sr = new StreamReader(file))
                 {
-                    int i = 0;
+                    namesH.Clear();
+                    namesN.Clear();
+
                     string line;
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        namesH[i] = line.Substring(0, line.IndexOf(' '));
-                        namesN[i] = line.Substring(line.IndexOf(' ') + 1);
-                        i++;
+                        namesH.Add(line.Substring(0, line.IndexOf(' ')));
+                        namesN.Add(line.Substring(line.IndexOf(' ') + 1));
                     }
                 }
             }
@@ -84,12 +83,40 @@ namespace Process_PC_Manager
                 // Read the current configuration list
                 using (StreamReader sr = new StreamReader(configPath))
                 {
-                    int i = 0;
+                    configs.Clear();
+
                     string line;
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        configs[i] = line;
+                        configs.Add(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public void SetConfigList()
+        {
+            // Add the new configuration name to the list and sort alphabetically
+            configs.Add(fileName);
+            configs.Sort();
+
+            try
+            {
+                // Write the current configuration list
+                using (StreamWriter sw = new StreamWriter(configPath))
+                {
+                    int i = 0;
+                    string line;
+
+                    while ((configs[i] != null))
+                    {
+                        line = configs[i];
+                        sw.WriteLine(line);
                         i++;
                     }
                 }
@@ -100,19 +127,14 @@ namespace Process_PC_Manager
             }
         }
 
-        public int GetHostName_Length()
-        {
-            return namesH.Count(s => s != null);
-        }
-
-        public int GetConfigs_Length()
-        {
-            return configs.Count(s => s != null);
-        }
-
         public string GetHostName(int i)
         {
             return namesH[i];
+        }
+
+        public string GetNickName(int i)
+        {
+            return namesN[i];
         }
 
         public string GetConfigs(int i)
@@ -120,10 +142,19 @@ namespace Process_PC_Manager
             return configs[i];
         }
 
-
-        public string GetNickName(int i)
+        public List<String> GetHostName()
         {
-            return namesN[i];
+            return namesH;
+        }
+
+        public List<String> GetNickName()
+        {
+            return namesN;
+        }
+
+        public List<String> GetConfigs()
+        {
+            return configs;
         }
 
         public void SetHostName(String str, int i)

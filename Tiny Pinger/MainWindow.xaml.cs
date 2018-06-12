@@ -11,7 +11,7 @@ namespace Process_PC_Manager
         BrushConverter converter = new BrushConverter();
 
         PingReply reply;
-        Config config = new Config();
+        Config config; 
         Timer timer = new Timer();
 
         int timeout = 100;
@@ -31,24 +31,20 @@ namespace Process_PC_Manager
 
         private void LoadConfig()
         {
-            int i = 0;
+            config = new Config();
 
             Selection.Items.Clear();
 
-            while (i < config.GetConfigs_Length())
+            foreach (var name in config.GetConfigs())
             {
-                Selection.Items.Add(config.GetConfigs(i));
-                i++;
+                Selection.Items.Add(name);
             }
 
-            Selection.SelectedValue = config.GetFileName();
+            Selection.SelectedItem = config.GetFileName();
 
-            i = 0;
-
-            while (i < config.GetHostName_Length())
+            foreach (var name in config.GetHostName())
             {
-                PingAsync(config.GetHostName(i).ToString());
-                i++;
+                PingAsync(name);
             }
 
             Interval.Text = interval.ToString();
@@ -365,12 +361,9 @@ namespace Process_PC_Manager
         {
             this.Dispatcher.Invoke(() =>
             {
-                int i = 0;
-
-                while (i < 20)
+                foreach (var name in config.GetHostName())
                 {
-                    PingAsync(config.GetHostName(i).ToString());
-                    i++;
+                    PingAsync(name);
                 }
             });
 
@@ -406,10 +399,12 @@ namespace Process_PC_Manager
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Manage_Click(object sender, RoutedEventArgs e)
         {
             ManageWindow manage = new ManageWindow();
             manage.Show();
+
+            LoadConfig();
         }
 
         private void Open_Click(object sender, RoutedEventArgs e)

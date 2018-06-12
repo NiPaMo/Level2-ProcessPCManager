@@ -24,7 +24,7 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <PublisherName>Nicholas Moyer</PublisherName>
+    <PublisherName>AK Steel</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -116,6 +116,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ListNamePromptWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PasswordPromptWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +128,9 @@
   <ItemGroup>
     <Compile Include="ManageWindow.xaml.cs">
       <DependentUpon>ManageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListNamePromptWindow.xaml.cs">
+      <DependentUpon>ListNamePromptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="PasswordPromptWindow.xaml.cs">
       <DependentUpon>PasswordPromptWindow.xaml</DependentUpon>

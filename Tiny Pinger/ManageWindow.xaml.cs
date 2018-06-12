@@ -17,12 +17,9 @@ namespace Process_PC_Manager
 
             InitializeComponent();
 
-            int i = 0;
-
-            while (i < config.GetHostName_Length())
+            foreach (var name in config.GetHostName())
             {
-                HostName.Items.Add(config.GetHostName(i).ToString());
-                i++;
+                HostName.Items.Add(name);
             }
 
             HostName.SelectedIndex = 0;
