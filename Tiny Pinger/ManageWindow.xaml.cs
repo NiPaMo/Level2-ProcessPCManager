@@ -15,6 +15,9 @@ namespace Process_PC_Manager
         {
             prompt.ShowDialog();
 
+            if (prompt.GetCancel())
+                this.Close();
+
             InitializeComponent();
 
             foreach (var name in config.GetHostName())
@@ -34,7 +37,7 @@ namespace Process_PC_Manager
                 Impersonation = ImpersonationLevel.Impersonate,
                 Authentication = AuthenticationLevel.Packet,
                 EnablePrivileges = true,
-                Username = hostName + "\\" +prompt.GetUsername(),
+                Username = hostName + "\\" + prompt.GetUsername(),
                 Password = prompt.GetPassword()
             };
 

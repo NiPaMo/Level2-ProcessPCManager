@@ -129,17 +129,38 @@ namespace Process_PC_Manager
 
         public string GetHostName(int i)
         {
-            return namesH[i];
+            try
+            {
+                return namesH[i];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public string GetNickName(int i)
         {
-            return namesN[i];
+            try
+            {
+                return namesN[i];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public string GetConfigs(int i)
         {
-            return configs[i];
+            try
+            {
+                return configs[i];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public List<String> GetHostName()

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Process_PC_Manager"
         mc:Ignorable="d"
         Title="Host Name Configuration" Height="675" Width="265" Background="LightGray">
-    <Grid>
+    <Grid x:Name="Parent">
         <!--Header-->
         <Grid VerticalAlignment="Top" Height="25">
             <Label Content="  PC         Host Name            Nick Name" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Height="30"/>
@@ -17,141 +17,141 @@
             <!--Row 1-->
             <Grid VerticalAlignment="Top" Height="25">
                 <Label Content="1" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC1_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC1_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC1_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC1_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 2-->
             <Grid Margin="0,25,0,0" VerticalAlignment="Top">
                 <Label Content="2" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC2_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC2_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC2_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC2_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 3-->
             <Grid Margin="0,50,0,0" VerticalAlignment="Top">
                 <Label Content="3" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC3_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC3_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC3_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC3_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 4-->
             <Grid Margin="0,75,0,0" VerticalAlignment="Top">
                 <Label Content="4" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC4_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC4_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC4_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC4_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 5-->
             <Grid Margin="0,100,0,0" VerticalAlignment="Top">
                 <Label Content="5" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC5_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC5_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC5_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC5_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 6-->
             <Grid Margin="0,125,0,0" VerticalAlignment="Top">
                 <Label Content="6" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC6_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC6_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC6_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC6_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 7-->
             <Grid Margin="0,150,0,0" VerticalAlignment="Top">
                 <Label Content="7" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC7_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC7_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC7_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC7_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 8-->
             <Grid Margin="0,175,0,0" VerticalAlignment="Top">
                 <Label Content="8" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC8_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC8_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC8_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC8_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 9-->
             <Grid Margin="0,200,0,0" VerticalAlignment="Top">
                 <Label Content="9" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC9_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC9_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC9_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC9_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 10-->
             <Grid Margin="0,225,0,0" VerticalAlignment="Top">
                 <Label Content="10" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC10_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC10_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC10_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC10_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 11-->
             <Grid Margin="0,250,0,0" VerticalAlignment="Top">
                 <Label Content="11" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC11_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC11_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC11_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC11_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 12-->
             <Grid Margin="0,275,0,0" VerticalAlignment="Top">
                 <Label Content="12" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC12_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC12_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC12_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC12_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 13-->
             <Grid Margin="0,300,0,0" VerticalAlignment="Top">
                 <Label Content="13" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC13_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC13_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC13_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC13_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 14-->
             <Grid Margin="0,325,0,0" VerticalAlignment="Top">
                 <Label Content="14" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC14_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC14_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC14_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC14_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 15-->
             <Grid Margin="0,350,0,0" VerticalAlignment="Top">
                 <Label Content="15" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC15_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC15_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC15_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC15_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 16-->
             <Grid Margin="0,375,0,0" VerticalAlignment="Top">
                 <Label Content="16" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC16_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC16_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC16_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC16_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 17-->
             <Grid Margin="0,400,0,0" VerticalAlignment="Top">
                 <Label Content="17" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC17_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC17_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC17_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC17_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 18-->
             <Grid Margin="0,425,0,0" VerticalAlignment="Top">
                 <Label Content="18" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC18_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC18_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC18_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC18_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 19-->
             <Grid Margin="0,450,0,0" VerticalAlignment="Top">
                 <Label Content="19" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC19_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC19_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC19_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC19_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
 
             <!--Row 20-->
             <Grid Margin="0,475,0,0" VerticalAlignment="Top">
                 <Label Content="20" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-                <TextBox x:Name="PC20_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90"/>
-                <TextBox x:Name="PC20_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100"/>
+                <TextBox x:Name="PC20_HostName" HorizontalAlignment="Left" Margin="45,0,0,0" Width="90" Uid="HOSTNAME"/>
+                <TextBox x:Name="PC20_NickName" HorizontalAlignment="Left" Margin="140,0,0,0" Width="100" Uid="NICKNAME"/>
             </Grid>
         </Grid>
 

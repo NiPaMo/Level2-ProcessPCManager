@@ -6,8 +6,9 @@ namespace Process_PC_Manager
     {
         private static string username;
         private static string password;
+        private static bool cancel;
 
-            public PasswordPromptWindow()
+        public PasswordPromptWindow()
         {
             InitializeComponent();
         }
@@ -23,16 +24,24 @@ namespace Process_PC_Manager
             return password;
         }
 
+        public bool GetCancel()
+        {
+            return cancel;
+        }
+
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             username = Username.Text;
             password = Password.Text;
+            cancel = false;
 
             this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            cancel = true;
+
             this.Close();
         }
     }
