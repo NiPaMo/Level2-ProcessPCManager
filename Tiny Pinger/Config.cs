@@ -127,6 +127,34 @@ namespace Process_PC_Manager
             }
         }
 
+        public void RemoveConfigList()
+        {
+            // Add the new configuration name to the list and sort alphabetically
+            configs.Remove(fileName);
+            configs.Sort();
+
+            try
+            {
+                // Write the current configuration list
+                using (StreamWriter sw = new StreamWriter(configPath))
+                {
+                    int i = 0;
+                    string line;
+
+                    while ((configs[i] != null))
+                    {
+                        line = configs[i];
+                        sw.WriteLine(line);
+                        i++;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
         public string GetHostName(int i)
         {
             try

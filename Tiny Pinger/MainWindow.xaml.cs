@@ -97,8 +97,11 @@ namespace Process_PC_Manager
             i = 0;
             foreach (var name in config.GetHostName())
             {
-                PingAsync(name, i);
-                i++;
+                if (name != "")
+                {
+                    PingAsync(name, i);
+                    i++;
+                }
             }
 
             if (i != 19)
@@ -131,6 +134,7 @@ namespace Process_PC_Manager
                 i++;
             }
 
+            Time.Content = DateTime.Now.ToString("HH:mm:ss:ff");
             Interval.Text = interval.ToString();
             Timeout.Text = timeout.ToString();
         }
@@ -164,9 +168,24 @@ namespace Process_PC_Manager
             {
                 foreach (var name in config.GetHostName())
                 {
-                    PingAsync(name, i);
-                    i++;
+                    if (name != "")
+                    {
+                        PingAsync(name, i);
+                        i++;
+                    }
                 }
+
+                if (i != 19)
+                {
+                    while (i < 20)
+                    {
+                        labelsData[i].Content = "";
+                        rectsStatus[i].Fill = (Brush)converter.ConvertFromString("#FFF");
+                        i++;
+                    }
+                }
+
+                Time.Content = DateTime.Now.ToString("HH:mm:ss:ff");
             });
 
         }
@@ -175,6 +194,13 @@ namespace Process_PC_Manager
         {
             ConfigurationWindow configuration = new ConfigurationWindow();
             configuration.Show();
+
+            configuration.Closed += Configuration_Closed;
+        }
+
+        private void Configuration_Closed(object sender, EventArgs e)
+        {
+            LoadConfig();
         }
 
         private void Apply_Click(object sender, RoutedEventArgs e)
@@ -220,6 +246,19 @@ namespace Process_PC_Manager
             config.SetFileName(Selection.SelectedItem.ToString());
 
             LoadConfig();
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete the " + config.GetFileName() + "\nconfiguration list?", "Comfirm Action", 
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                // Delete the list name from the file and reload the results
+                config.RemoveConfigList();
+                LoadConfig();
+            }
         }
     }
 }
