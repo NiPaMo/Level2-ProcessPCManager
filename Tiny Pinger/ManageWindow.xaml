@@ -8,10 +8,13 @@
         Title="Computer Management" Height="350" Width="375" Background="LightGray">
     <Grid>
         <Button Content="Connect" HorizontalAlignment="Left" Margin="257,10,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
-        <TextBlock x:Name="Details" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="200" Width="347" FontSize="14"/>
+        <TextBox x:Name="Details" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="224" Width="347" FontSize="14" 
+                 Background="LightGray" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
         <Label Content="Host Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Details" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <ComboBox x:Name="HostName" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="125"/>
+        <ComboBox x:Name="HostName" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="125" SelectionChanged="HostName_SelectionChanged"/>
+
+        <Label x:Name="ViewLabel"  Content="Data to View:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <ComboBox x:Name="ViewBox" HorizontalAlignment="Left" Margin="95,45,0,0" VerticalAlignment="Top" Width="117" Visibility="Hidden" SelectionChanged="ViewBox_SelectionChanged"/>
 
     </Grid>
 </Window>
