@@ -26,6 +26,7 @@ namespace Process_PC_Manager
 
             foreach (var name in config.GetHostName())
             {
+                if (name != "")
                 HostName.Items.Add(name);
             }
             HostName.SelectedIndex = 0;
@@ -43,17 +44,25 @@ namespace Process_PC_Manager
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
 
             ManagementObjectCollection queryCollection = searcher.Get();
-            foreach (ManagementObject m in queryCollection)
+            try
             {
-                // Display the remote computer information
-                Details.Text = "Computer Name\t:  " + m["CSName"] + "\n" +
-                               "Status       \t:  " + m["Status"] + "\n" +
-                               "OS Name      \t:  " + m["Caption"] + "\n" +
-                               "Service Pack \t:  " + m["CSDVersion"] + "\n" +
-                               "Version      \t:  " + m["Version"] + "\n" +
-                               "Build Number \t:  " + m["BuildNumber"] + "\n" +
-                               "Architecture \t:  " + m["OSArchitecture"] + "\n" +
-                               "Serial Number\t:  " + m["SerialNumber"] + "\n";
+                foreach (ManagementObject m in queryCollection)
+                {
+                    // Display the remote computer information
+                    Details.Text = "Computer Name\t:  " + m["CSName"] + "\n" +
+                                   "Status       \t:  " + m["Status"] + "\n" +
+                                   "OS Name      \t:  " + m["Caption"] + "\n" +
+                                   "Service Pack \t:  " + m["CSDVersion"] + "\n" +
+                                   "Version      \t:  " + m["Version"] + "\n" +
+                                   "Build Number \t:  " + m["BuildNumber"] + "\n" +
+                                   "Architecture \t:  " + m["OSArchitecture"] + "\n" +
+                                   "Serial Number\t:  " + m["SerialNumber"] + "\n";
+                }
+            }
+            catch (ManagementException ex)
+            {
+                // Display error to user
+                MessageBox.Show(ex.Message.ToString(), "Data Not Found", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -63,7 +72,7 @@ namespace Process_PC_Manager
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
 
             ManagementObjectCollection queryCollection = searcher.Get();
-            Details.Text = queryCollection.Count + " Active Processes\n";
+            Details.Text = queryCollection.Count + " Active Processes\n\n";
             foreach (ManagementObject m in queryCollection)
             {
                 // Display the remote computer information
@@ -88,9 +97,6 @@ namespace Process_PC_Manager
             {
                 scope = new ManagementScope("\\\\" + hostName + ".maprocess.corp.aksteel.com\\root\\cimv2", options);
                 scope.Connect();
-
-                ViewLabel.Visibility = Visibility.Visible;
-                ViewBox.Visibility = Visibility.Visible;
             }
             catch (UnauthorizedAccessException)
             {
@@ -101,6 +107,16 @@ namespace Process_PC_Manager
             {
                 Console.WriteLine(ex);
             }
+
+            ViewBox.Items.Clear();
+
+            foreach (var view in views)
+            {
+                ViewBox.Items.Add(view);
+            }
+
+            ViewLabel.Visibility = Visibility.Visible;
+            ViewBox.Visibility = Visibility.Visible;
         }
 
         private void ViewBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

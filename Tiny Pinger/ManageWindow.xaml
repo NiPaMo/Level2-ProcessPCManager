@@ -8,7 +8,7 @@
         Title="Computer Management" Height="350" Width="375" Background="LightGray">
     <Grid>
         <Button Content="Connect" HorizontalAlignment="Left" Margin="257,10,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
-        <TextBox x:Name="Details" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="224" Width="347" FontSize="14" 
+        <TextBox x:Name="Details" Margin="10,86,10,10" FontSize="14" 
                  Background="LightGray" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
         <Label Content="Host Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="HostName" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="125" SelectionChanged="HostName_SelectionChanged"/>

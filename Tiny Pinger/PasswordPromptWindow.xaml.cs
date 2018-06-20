@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace Process_PC_Manager
 {
@@ -38,11 +39,23 @@ namespace Process_PC_Manager
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             cancel = true;
 
             this.Close();
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                username = Username.Text;
+                password = Password.Text;
+                cancel = false;
+
+                this.Close();
+            }
         }
     }
 }
