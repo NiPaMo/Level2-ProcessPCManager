@@ -33,7 +33,7 @@ namespace Process_PC_Manager
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             username = Username.Text;
-            password = Password.Text;
+            password = Password.Password;
             cancel = false;
 
             this.Close();
@@ -51,7 +51,7 @@ namespace Process_PC_Manager
             if (e.Key == Key.Enter)
             {
                 username = Username.Text;
-                password = Password.Text;
+                password = Password.Password;
                 cancel = false;
 
                 this.Close();

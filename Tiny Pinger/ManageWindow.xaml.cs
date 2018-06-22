@@ -97,6 +97,16 @@ namespace Process_PC_Manager
             {
                 scope = new ManagementScope("\\\\" + hostName + ".maprocess.corp.aksteel.com\\root\\cimv2", options);
                 scope.Connect();
+
+                ViewBox.Items.Clear();
+
+                foreach (var view in views)
+                {
+                    ViewBox.Items.Add(view);
+                }
+
+                ViewLabel.Visibility = Visibility.Visible;
+                ViewBox.Visibility = Visibility.Visible;
             }
             catch (UnauthorizedAccessException)
             {
@@ -108,15 +118,6 @@ namespace Process_PC_Manager
                 Console.WriteLine(ex);
             }
 
-            ViewBox.Items.Clear();
-
-            foreach (var view in views)
-            {
-                ViewBox.Items.Add(view);
-            }
-
-            ViewLabel.Visibility = Visibility.Visible;
-            ViewBox.Visibility = Visibility.Visible;
         }
 
         private void ViewBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
