@@ -100,10 +100,9 @@ namespace Process_PC_Manager
 
                 ViewBox.Items.Clear();
 
-                foreach (var view in views)
-                {
+                foreach (var view in views)      
                     ViewBox.Items.Add(view);
-                }
+                
 
                 ViewLabel.Visibility = Visibility.Visible;
                 ViewBox.Visibility = Visibility.Visible;
@@ -115,7 +114,8 @@ namespace Process_PC_Manager
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                // Display error to user
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
