@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Process PC Manager", "Tiny Pinger\Process PC Manager.csproj", "{0B0DFBE5-81CF-4855-8CAF-01F276B076E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Process PC Manager", "ProcessPCManager\Process PC Manager.csproj", "{0B0DFBE5-81CF-4855-8CAF-01F276B076E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
